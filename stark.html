@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Game of Thrones</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{  
+          min-height: 100vh;
+            height: 100%;
+          background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.5)),
+        url(images/starkbg2.jpg);
+         background-attachment: fixed;
+            
+            
+        }
+        /* body::after{
+          content: '';
+          background-color: #0000004e;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;  
+
+        } */
+        .almendra-regular {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.almendra-bold {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.almendra-regular-italic {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.almendra-bold-italic {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+       .s::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 50px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(123, 124, 118);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  opacity: 0;
+  transition: .4s;
+}
+        .s:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 60px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(123, 124, 118);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .l::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 70px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  transition: .4s;
+  opacity: 0;
+}
+        .l:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+  opacity: 1;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 100px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .g::after {
+  content: ""; 
+  opacity: 0;
+  transition: .4s;
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 60px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(13, 172, 212);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .g:hover::after {
+  content: ""; 
+  
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1  ;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 80px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(13, 172, 212);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .t::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 80px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(206, 24, 24);
+  opacity: 0;
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  transition: .4s;
+}
+        .t:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 120px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(206, 24, 24);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+
+  .ta::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(10%);
+  opacity: 0;
+  transition: .4s;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 50px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(14, 86, 15);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+  .ta:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(10%);
+  opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 70px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(14, 86, 15);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+.bio{
+    height: 65%;
+    width: 50%;
+    filter: grayscale(0);
+    border-radius: 20px;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 2%;
+    font-size: 25px;
+    display: inline-block;
+}
+.flag{
+    background: url(images/starkbanner\ png.png) center/cover;
+    width: 300px;
+    display: inline-block;
+    
+    height: 620px;
+    position: relative;
+    top: 13%;
+    scale: 1.1;
+    left: 0%;
+}
+.container{
+    height: 100%;
+}
+.card-img-top{
+    scale: 1;
+    transition: .4s;
+
+}
+.card{
+    overflow: hidden;
+}
+.card-img-top:hover{
+    scale: 1.06;
+
+}
+.b{
+    width: 100%;
+    height: 100%;
+    filter: blur();
+    background: linear-gradient(90deg, black,rgba(0, 0, 0, 0.29));
+    box-shadow: 1px  20px  10px rgba(71, 70, 70, 0.486);
+}
+.back{
+
+}
+      .nav-item{
+          font-size: 23px;
+        }
+.Watch{
+  scale: 1.2;
+  font-size: 20px;
+}
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark  fixed-top">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse d-flex justify-content-around navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav almendra-bold">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item s"><a class="nav-link " href="stark.html">Stark</a></div>
+          
+        </li>
+        <li class="nav-item">
+         <div class="nav-item l"><a class="nav-link text-warning" href="lannister.html">Lannister</a></div> 
+        </li>
+        <li class="nav-item">
+          <div class="nav-item t"> <a class="nav-link  text-danger" href="targaryen.html">Targareyen</a></div>
+         
+        </li>
+        <li class="nav-item">
+          <div class="nav-item g"> <a class="nav-link text-info" href="greyjoy.html">Greyjoy</a></div>
+         
+        </li>
+
+        <li class="nav-item">
+          
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <audio src="Ramin_Djawadi_-_Main_Title_OST_Game_Of_Thrones_(mp3.pm).mp3 " controls class="audio"></audio>
+</nav> 
+
+
+
+<div class="back"></div>
+<div class="  " style="" >
+    <div class="container">  <div class="bio almendra-bold text-dark">
+        <p style="font-size: 90px;text-align: center;color: black;">STARK</p><p style="color: rgb(204, 202, 202);">Westerosun şimalında, qədim Winterfell qalasına hökmranlıq edən Starklar, İlk İnsanların qanını daşıyan və qışın dondurucu soyuğuna qarşı dayanan ən sadiq xanədanlıqdır. Onların şüarı hər kəs üçün bir xəbərdarlıqdır: </p> <p  class="text-danger"   style="font-size: 50px; color: red; text-align: center;">'Winter is Coming'</p></div>
+        <a class="btn Watch btn-light almendra-bold-italic"  href="watch.html" role="button">Watch the  Videos</a>
+
+    <div class="flag"></div></div>
+
+
+
+  
+</div>
+ 
+
+
+
+  <div class="container">
+  
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/net stark.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">❄️ Eddard Stark</h5>
+              <p class="card-text">Ned Stark, Şimalın sərt təbiətində yetişmiş, ədaləti və şərəfi hər şeydən üstün tutan bir liderdir. Lord Rikard Starkın ikinci oğlu olan Ned, atası və böyük qardaşı Brendonun "Dəli Kral" tərəfindən qətlə yetirilməsindən sonra Qışyarı Lordu titulunu almışdır.
+
+Uşaqlıq dostu Robert Barateon ilə birlikdə Tarqaryen sülaləsinə qarşı üsyan qaldırmış və Robertin taxta çıxmasında həlledici rol oynamışdır. İllər sonra Robertin istəyi ilə, istəmədən də olsa "Kralın Əli" vəzifəsini icra etmək üçün intriqalarla dolu paytaxta — Kral Torpağına (King's Landing) yollanmışdır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/robb2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> 🐺 Robb Stark</h5>
+              <p class="card-text">Robb Stark, Ned Stark və Keytlin Tullinin böyük oğludur. Atasının Kral Torpağında həbs edilməsindən sonra Robb, Stark ordusunu toplayaraq cənuba yürüş etmiş və Şimalın müstəqilliyini elan edərək "Şimalın Kralı" seçilmişdir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-5">
+            <img src="images/caitlyn stark2.jpg" width="1px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🐟 Keytlin Stark</h5>
+              <p class="card-text">Keytlin, Çay Torpaqlarının (Riverlands) lordu Hoster Tullinin böyük qızıdır. Əslində Nedin qardaşı Brendon Stark ilə nişanlı olsa da, onun ölümündən sonra ailə ittifaqını qorumaq üçün Ned Stark ilə evlənmişdir. Sevgisiz başlayan bu izdivac, zamanla böyük bir eşqə və beş övladlı (Robb, Sansa, Arya, Bran, Rikon) möhkəm bir ailəyə çevrilmişdir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card my-2">
+            <img src="images/sansa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">👑 Sansa Stark</h5>
+              <p class="card-text">Sansa Stark, Ned və Keytlin Starkın böyük qızıdır. Hekayənin başında o, cəngavərlər, şahzadələr və romantik nağıllara inanan, nəzakətli və sadəlövh bir qız idi. Kraliça olmaq xəyalı ilə atası ilə birlikdə Kral Torpağına (King's Landing) getmiş, lakin orada atasının edamına şahid olmuş və Lannisterlərin əsirinə çevrilmişdir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/bran.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🦅 Bran Stark</h5>
+              <p class="card-text">Bran Stark, Ned və Keytlin Starkın ikinci oğlu, ailənin dördüncü övladıdır. Hekayənin başında dırmanmağı sevən, macəraçı bir uşaq idi. Lakin Cersei və Jaime Lannisterin gizli münasibətinə şahid olduğu üçün Jaime tərəfindən qüllədən atılmış və bu hadisə nəticəsində yerimə qabiliyyətini itirmişdir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/rikon stark.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🐺 Rikon Stark</h5>
+              <p class="card-text">Rikon, Ned və Keytlin Starkın beşinci və ən kiçik övladıdır. Hekayə başladığında cəmi 3-4 yaşlarında olan bu balaca uşaq, ailəsinin dağılmasına və atasının ölümünə ən travmatik şəkildə şahidlik edən üzvlərdən biridir. Atası və böyük qardaşları cənuba getdikdən sonra o, qardaşı Bran ilə birlikdə Qışyarıda qalmışdır.</p>
+            </div>
+          </div>
+        </div>
+    
+        
+        </div>
+      </div>
+  </div>
+
+
+
+    
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

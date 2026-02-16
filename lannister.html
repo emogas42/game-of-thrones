@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Game of Thrones</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{  
+          min-height: 100vh;
+            height: 100%;
+          background-image: 
+        linear-gradient(to right, rgba(39, 12, 12, 0.9), rgba(0, 0, 0, 0)),
+        url(images/lannister\ bg.jpg);
+         background-attachment: fixed;
+            
+            
+        }
+        /* body::after{
+          content: '';
+          background-color: #0000004e;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;  
+
+        } */
+        .almendra-regular {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+      .nav-item{
+          font-size: 23px;
+        }
+.almendra-bold {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.almendra-regular-italic {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.almendra-bold-italic {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+        .s::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 50px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(123, 124, 118);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  opacity: 0;
+  transition: .4s;
+}
+        .s:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 60px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(123, 124, 118);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .l::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 70px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  transition: .4s;
+  opacity: 0;
+}
+        .l:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+  opacity: 1;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 100px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .g::after {
+  content: ""; 
+  opacity: 0;
+  transition: .4s;
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 60px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(13, 172, 212);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .g:hover::after {
+  content: ""; 
+  
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1  ;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 80px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(13, 172, 212);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+        .t::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+          transform: translateX(10%);
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 80px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(206, 24, 24);
+  opacity: 0;
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+  transition: .4s;
+}
+        .t:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+          transform: translateX(10%);
+          opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 120px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(206, 24, 24);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+
+  .ta::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(10%);
+  opacity: 0;
+  transition: .4s;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 50px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(14, 86, 15);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+  .ta:hover::after {
+  content: ""; 
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(10%);
+  opacity: 1;
+
+  
+  /* Stendin ölçüləri və rəngi */
+  width: 70px; /* Yazının 80%-i qədər genişlik */
+  height: 4px; /* Stendin qalınlığı */
+  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
+  
+  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
+  box-shadow: 0px 5px 15px rgb(14, 86, 15);
+  
+  /* Kənarlarını bir az yuvarlaq etmək üçün */
+  border-radius: 2px;
+}
+.bio{
+    height: 65%;
+    width: 50%;
+    filter: grayscale(0);
+    border-radius: 20px;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 2%;
+    font-size: 25px;
+    display: inline-block;
+}
+.flag{
+    background: url(images/lannisterbannerpng.png) center/cover;
+    width: 300px;
+    display: inline-block;
+    height: 520px;
+    position: relative;
+    top: 13%;
+    margin-top: 50px;
+    scale: 1.1  ;
+    left: 4%;
+}
+.container{
+    height: 100%;
+}
+.card-img-top{
+    scale: 1;
+    transition: .4s;
+
+}
+.card{
+    overflow: hidden;
+}
+.card-img-top:hover{
+    scale: 1.03;
+
+}
+.b{
+    width: 100%;
+    height: 100%;
+    filter: blur();
+    background: linear-gradient(90deg, rgb(0, 0, 0),rgba(0, 0, 0, 0.29));
+    box-shadow: 1px  20px  10px rgba(71, 70, 70, 0.486);
+}
+.back{
+
+}
+.lannister-text {
+
+    color: #f1f1f1; /* Tam ağ yox, bir az "off-white" daha professional görünür */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Sətirlər arası məsafə rahat oxunuş üçün */
+    text-align: left; /* Soldan sağa gradient olduğu üçün solu seçirik */
+}
+.Watch{
+  scale: 1.5;
+}
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark  fixed-top">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse d-flex justify-content-around navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav almendra-bold">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item s"><a class="nav-link " href="stark.html">Stark</a></div>
+          
+        </li>
+        <li class="nav-item">
+         <div class="nav-item l"><a class="nav-link text-warning" href="lannister.html">Lannister</a></div> 
+        </li>
+        <li class="nav-item">
+          <div class="nav-item t"> <a class="nav-link  text-danger" href="targaryen.html">Targareyen</a></div>
+         
+        </li>
+        <li class="nav-item">
+          <div class="nav-item g"> <a class="nav-link text-info" href="greyjoy.html">Greyjoy</a></div>
+         
+        </li>
+ 
+        <li class="nav-item">
+          
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <audio src="Ramin_Djawadi_-_Main_Title_OST_Game_Of_Thrones_(mp3.pm).mp3 " controls class="audio"></audio>
+</nav> 
+
+
+
+<div class="back"></div>
+<div class="  " style="" >
+    <div class="container">  <div class="bio almendra-bold text-dark">
+        <p style="font-size: 50px;text-align: center;color: gold;">Lannister</p><p style="color: rgb(204, 202, 202);" class="lannister-text">Kasterly Qayaliqinin dərinliklərində doğan qızılı şir, hər bir nəriltisi ilə yeddi krallığa öz qüdrətini xatırladır. Bizim dünyamızda nə rəhmə yer var, nə də təsadüfi qələbələrə; burada yalnız zəka və amansız iradə hökm sürür. Unutmayın ki, taclar qanla qazanılsa da, bir Lanister hər zaman borcunu qızıl və sadiqliklə ödəyir. </p> <p  class="text-danger"   style="font-size: 50px; color: red; text-align: center;">'Hear Me Roar'</p></div>
+ <a class="btn Watch btn-light almendra-bold-italic"  href="#" role="button"   href="watch.html">Watch the  Videos</a>
+    <div class="flag"></div></div>
+
+
+  
+</div>
+ 
+
+
+
+  <div class="container">
+  
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/tywin lannister.jpg " class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🦁 Tywin Lannister</h5>
+              <p class="card-text">Tayvin Lannister, Qərb torpaqlarının rəhbəri və Lannister ailəsinin patriarxıdır. O, gənc yaşlarında zəifləmiş ailə adını yenidən zirvəyə qaldırmış və üsyançı Reyn xanədanlığını tamamilə məhv edərək ("Castamere Yağışları" mahnısı bu hadisəyə həsr olunub) öz qəddarlığı ilə ad çıxarmışdır.
+
+Dəli Kral Aerys Tarqaryenin dövründə illərlə Kralın Əli vəzifəsini icra etmiş, lakin sonra kralla münasibətləri pozulduğu üçün vəzifəsindən istefa vermişdir. Robertin üsyanının sonunda, qalib tərəfi seçərək Kral Torpağına daxil olmuş və şəhəri talan etmişdir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/jamie.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">⚔️ Jaime Lannister</h5>
+              <p class="card-text">Ceymi, Tayvin Lannisterin böyük oğlu və Sersinin əkiz qardaşıdır. O, gənc yaşlarında fövqəladə qılınc oynatma qabiliyyəti ilə seçilmiş və tarixin ən gənc Kral Mühafizəçisi olmuşdur. Robertin üsyanı zamanı qorumalı olduğu "Dəli Kral" Aerys Tarqaryeni kürəyindən vuraraq öldürdüyü üçün bütün Vesterosda "şərəfsiz" və "Kralqatili" kimi tanınır.
+
+Lakin illər sonra məlum olur ki, Ceymi kralı bütün paytaxtı "vəhşi atəş"lə yandırmaq planından xilas etmək üçün öldürüb. O, öz şərəfini şəhəri xilas etmək naminə qurban vermişdir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/cercei.jpg" width="1px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🍷 Cersei Lannister</h5>
+              <p class="card-text">Sersi, Tayvin Lannisterin yeganə qızı və Ceyminin əkiz bacısıdır. Robertin üsyanından sonra sülalə ittifaqını möhkəmləndirmək üçün Robert Barateon ilə evlənmiş və Vesterosun Kralıçası olmuşdur. Lakin o, heç vaxt Robertə sadiq qalmamış, bütün övladlarını (Coffri, Mirsella və Tommen) qardaşı Ceymidən dünyaya gətirmişdir.
+
+Atası Tayvin kimi, Sersi də hakimiyyəti hər şeydən üstün tutur. Lakin atasından fərqli olaraq, o, strateji düşünməkdən çox, emosiyaları və intiqam hissi ilə hərəkət edir. Bu da onun ətrafında saysız-hesabsız düşmən qazanmasına səbəb olmuşdur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card my-2">
+            <img src="images/tryian.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">🍷 Tyrion Lannister</h5>
+              <p class="card-text">Tirion, Tayvin Lannisterin üçüncü və ən kiçik övladıdır. Doğuşu zamanı anası vəfat etdiyi üçün atası və bacısı Sersi ondan ömür boyu nifrət etmişdir. Fiziki olaraq "cırtdan" olması onu döyüş meydanlarından uzaq tutsa da, Tirion bu çatışmazlığı zəkası, kitab oxumağa olan həvəsi və iti dili ilə kompensasiya etmişdir.
+
+O, Vesterosun ən böyük strateqlərindən biridir. Xüsusilə Qara Su döyüşündə (Battle of the Blackwater) Kral Torpağını xilas edərək hərbi dühasını sübut etmişdir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+        
+        </div>
+      </div>
+  </div>
+
+
+
+    
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
