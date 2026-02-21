@@ -316,55 +316,115 @@
   background:linear-gradient(rgba(119, 12, 12, 0.89),black);
   color: rgb(192, 189, 189);
 }
+
+
+.nav-item {
+  font-size: 23px;
+ 
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px
+}
+
+.nav-item::after
+/* .nav-item::before */ { 
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to right, #ff0000, #fbff0077); */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+.nav-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;                    /* top, right, bottom, left = 0 */
+    background: transparent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+}
+.nav-item{
+    z-index: 6;
+}
+
+/* .nav-item::before {
+  top: -5px;
+  transform-origin: left;
+} */
+
+.nav-item:nth-child(2)::after { background-color: rgb(181, 182, 181);   }  /* yaşıl */
+.nav-item:nth-child(3)::after { background: rgb(255, 187, 0); }
+.nav-item:nth-child(4)::after { background: rgb(169, 8, 8);  }
+.nav-item:nth-child(5)::after { background: rgb(2, 206, 220);  }
+.nav-item:nth-child(6)::after { background: rgb(4, 121, 4);  }
+
+.nav-item:hover::after,
+.nav-item:hover::before {
+  
+  transform: scaleX(1);
+  z-index: -1;
+}
+.nav-link:hover{
+  color: rgb(0, 0, 0);
+}
+  
+.l{
+    z-index: 5;
+}
+@media (max-width:600px){
+
+
+}
     </style>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark  fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">
-    
+    <a class="navbar-brand" href="#">Game of Thrones</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse d-flex justify-content-around navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav almendra-bold">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <div class="nav-item s"><a class="nav-link " href="stark.html">Stark</a></div>
-          
+          <a class="nav-link" href="stark.html">Stark</a>
         </li>
         <li class="nav-item">
-         <div class="nav-item l"><a class="nav-link text-warning" href="lannister.html">Lannister</a></div> 
+          <a class="nav-link" href="lannister.html">Lannister </a>
+        <li class="nav-item">
+          <a class="nav-link" href="targaryen.html">Targareyen</a>
         </li>
         <li class="nav-item">
-          <div class="nav-item t"> <a class="nav-link  text-danger" href="targaryen.html">Targareyen</a></div>
-         
+          <a class="nav-link" href="greyjoy.html">Greyjoy</a>
         </li>
         <li class="nav-item">
-          <div class="nav-item g"> <a class="nav-link text-info" href="greyjoy.html">Greyjoy</a></div>
-         
+          <a class="nav-link" href="baratheon.html">Baratheon</a>
         </li>
 
-        <li class="nav-item">
-          <div class="nav-item ta"> <a class="nav-link text-success" href="baratheon.html">Baratheon</a></div>
-          
-        </li>
-        
       </ul>
     </div>
   </div>
-  <audio src="Ramin_Djawadi_-_Main_Title_OST_Game_Of_Thrones_(mp3.pm).mp3 " controls class="audio"></audio>
-</nav> 
+</nav>
 
 
 
 <div class="back"></div>
 <div class="  " style="" >
-    <div class="container">  <div class="bio almendra-bold text-dark">
+    <div class="container">
+        <div class="bio almendra-bold text-dark">
         <p style="font-size: 50px;text-align: left;color: rgb(118, 9, 9);">Targaryen</p><p style="color: rgb(204, 202, 202);" class="lannister-text">Tarqaryen xanədanı qədim Valiriyanın süqutundan sağ çıxan və əjdahaların gücü ilə Vesterosu fəth edən ən qüdrətli sülalədir. 300 il ərzində Yeddi Krallığı vahid bayraq altında birləşdirən bu ailə, həm möhtəşəm fatehlər, həm də "Dəli Kral" kimi qəddar hökmdarlar yetişdirmişdir. "Od və Qan" şüarı ilə hərəkət edən xanədan üzvləri, əjdaha qanını saf saxlamaq üçün ailədaxili izdivaclara və mistik güclərə böyük önəm verirdilər. Lakin daxili çəkişmələr və Robert Barateonun üsyanı nəticəsində hakimiyyətlərini itirsələr də, Deniris Tarqaryen və Con Snou (Aeqon Tarqaryen) vasitəsilə sülalənin mirası tarixin gedişatını kökündən dəyişmişdir. </p> <p  class=""   style="font-size: 50px; color:goldenrod; text-align: center;">'Fire And Blood'</p></div>
- <a class="btn Watch btn-light almendra-bold-italic"   role="button"   href="watch.html">Watch the  Videos</a>
-    <div class="flag"></div></div>
+    <a class="btn Watch btn-light almendra-bold-italic"   role="button"   href="watch.html">Watch the  Videos</a>
+    <div class="flag"></div>
+    </div>
 
 
   

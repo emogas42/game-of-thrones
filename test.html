@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Test</title>
+    <style>
+        
+
+.nav-item {
+  font-size: 23px;
+ 
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px
+}
+
+.nav-item::after
+/* .nav-item::before */ { 
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to right, #ff0000, #fbff0077); */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+.nav-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;                    /* top, right, bottom, left = 0 */
+    background: transparent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+}
+.nav-item{
+    z-index: 6;
+}
+
+/* .nav-item::before {
+  top: -5px;
+  transform-origin: left;
+} */
+
+.nav-item:nth-child(2)::after { background-color: rgb(181, 182, 181);   }  /* yaşıl */
+.nav-item:nth-child(3)::after { background: rgb(255, 187, 0); }
+.nav-item:nth-child(4)::after { background: rgb(169, 8, 8);  }
+.nav-item:nth-child(5)::after { background: rgb(2, 206, 220);  }
+.nav-item:nth-child(6)::after { background: rgb(4, 121, 4);  }
+
+.nav-item:hover::after,
+.nav-item:hover::before {
+  
+  transform: scaleX(1);
+  z-index: -1;
+}
+.nav-link:hover{
+  color: rgb(0, 0, 0);
+}
+  
+.l{
+    z-index: 5;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Game of Thrones</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stark.html">Stark</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lannister.html">Lannister </a>
+        <li class="nav-item">
+          <a class="nav-link" href="targaryen.html">Targareyen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="greyjoy.html">Greyjoy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="baratheon.html">Baratheon</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

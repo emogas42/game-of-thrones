@@ -59,203 +59,98 @@
   font-weight: 700;
   font-style: italic;
 }
-        .s::after {
-  content: ""; 
+
+.s::after{
+  content: '';
   position: absolute;
   bottom: 0px;
-          transform: translateX(10%);
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 50px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(123, 124, 118);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
+  left:550px ;
+  width: 60px;
+  height: 5px;
+  background-color: aquamarine;
+  z-index: 5;
+  border-radius: 4px;
   opacity: 0;
   transition: .4s;
+  transform: translateY();
 }
-        .s:hover::after {
-  content: ""; 
-  position: absolute;
-  bottom: 10px;
-          transform: translateX(10%);
-          opacity: 1;
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 60px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(123, 124, 118); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(123, 124, 118);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-}
-        .l::after {
-  content: ""; 
-  position: absolute;
-  bottom: 0px;
-          transform: translateX(10%);
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 70px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-  transition: .4s;
-  opacity: 0;
-}
-        .l:hover::after {
-  content: ""; 
-  position: absolute;
-  bottom: 10px;
+.s:hover::after{
   opacity: 1;
-          transform: translateX(10%);
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 100px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(212, 182, 13); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgba(188, 205, 9, 0.5);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
+  transform: translateY(-10px);
 }
-        .g::after {
-  content: ""; 
-  opacity: 0;
-  transition: .4s;
+.l::after{
+  content: '';
   position: absolute;
   bottom: 0px;
-          transform: translateX(10%);
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 60px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(13, 172, 212);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-}
-        .g:hover::after {
-  content: ""; 
-  
-  position: absolute;
-  bottom: 10px;
-          transform: translateX(10%);
-          opacity: 1  ;
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 80px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(13, 172, 212); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(13, 172, 212);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-}
-        .t::after {
-  content: ""; 
-  position: absolute;
-  bottom: 0px;
-          transform: translateX(10%);
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 80px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(206, 24, 24);
-  opacity: 0;
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-  transition: .4s;
-}
-        .t:hover::after {
-  content: ""; 
-  position: absolute;
-  bottom: 10px;
-          transform: translateX(10%);
-          opacity: 1;
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 120px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(206, 24, 24); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(206, 24, 24);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
-}
-
-  .ta::after {
-  content: ""; 
-  position: absolute;
-  bottom: 0px;
-  transform: translateX(10%);
+  left:550px ;
+  width: 60px;
+  height: 5px;
+  background-color: aquamarine;
+  z-index: 5;
+  border-radius: 4px;
   opacity: 0;
   transition: .4s;
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 50px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(14, 86, 15);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
+  transform: translateY();
 }
-  .ta:hover::after {
-  content: ""; 
-  position: absolute;
-  bottom: 10px;
-  transform: translateX(10%);
+.l:hover::after{
   opacity: 1;
-
-  
-  /* Stendin ölçüləri və rəngi */
-  width: 110px; /* Yazının 80%-i qədər genişlik */
-  height: 4px; /* Stendin qalınlığı */
-  background-color: rgb(14, 86, 15); /* İstədiyin ağ rəng */
-  
-  /* Stendi daha estetik etmək üçün kölgə (isteğe bağlı) */
-  box-shadow: 0px 5px 15px rgb(14, 86, 15);
-  
-  /* Kənarlarını bir az yuvarlaq etmək üçün */
-  border-radius: 2px;
+  transform: translateY(-10px);
 }
+.t::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left:550px ;
+  width: 60px;
+  height: 5px;
+  background-color: aquamarine;
+  z-index: 5;
+  border-radius: 4px;
+  opacity: 0;
+  transition: .4s;
+  transform: translateY();
+}
+.t:hover::after{
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.ta::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left:550px ;
+  width: 60px;
+  height: 5px;
+  background-color: aquamarine;
+  z-index: 5;
+  border-radius: 4px;
+  opacity: 0;
+  transition: .4s;
+  transform: translateY();
+}
+.ta:hover::after{
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.g::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left:550px ;
+  width: 60px;
+  height: 5px;
+  background-color: aquamarine;
+  z-index: 5;
+  border-radius: 4px;
+  opacity: 0;
+  transition: .4s;
+  transform: translateY();
+}
+.g:hover::after{
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
 .bio{
     height: 65%;
     width: 50%;
@@ -287,6 +182,9 @@
     scale: 1;
     transition: .4s;
 
+}
+.nav-link{
+  font-size: 23px;
 }
 .card{
     overflow: hidden;
@@ -326,57 +224,54 @@
   position: relative;
   bottom: 330px;
 }
+@media (max-width:1200px){
+  .s::after{
+    content: '';
+    width: 60px;
+    height: 5px;
+    background-color: rgb(162, 164, 163);
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    top: 150px;
+  }
+  .yara{
+    position: relative;
+    bottom:0px ;
+  }
+
+}
     </style>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark  fixed-top">
+<nav class="navbar navbar-expand-lg  almendra-bold navbar-dark bg-dark justify-content-around">
   <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse d-flex justify-content-around navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav almendra-bold">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <div class="nav-item s"><a class="nav-link " href="stark.html">Stark</a></div>
-          
-        </li>
-        <li class="nav-item">
-         <div class="nav-item l"><a class="nav-link text-warning" href="lannister.html">Lannister</a></div> 
-        </li>
-        <li class="nav-item">
-          <div class="nav-item t"> <a class="nav-link  text-danger" href="targaryen.html">Targareyen</a></div>
-         
-        </li>
-        <li class="nav-item">
-          <div class="nav-item g"> <a class="nav-link text-info" href="greyjoy.html">Greyjoy</a></div>
-         
-        </li>
-
-        <li class="nav-item">
-        <div class="nav-item ta"> <a class="nav-link text-success" href="baratheon.html">Baratheon</a></div>
-          
-        </li>
-        
-      </ul>
+    <div class="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link s " style=" color: rgb(123, 124, 118);  " href="stark.html">Stark</a>
+        <a class="nav-link l" style="color: rgb(212, 182, 13)" href="lannister.html">Lannister</a>
+        <a class="nav-link t"  style="color: rgb(206, 24, 24)" href="targaryen.html">Targaryen</a>
+        <a class="nav-link g" style="color: rgb(13, 172, 212)" href="greyjoy.html">Greyjoy</a>
+        <a class="nav-link ta " style=" color: rgb(14, 86, 15)" href="baratheon.html">Baratheon</a>
+      </div>
     </div>
   </div>
-  <audio src="Ramin_Djawadi_-_Main_Title_OST_Game_Of_Thrones_(mp3.pm).mp3 " controls class="audio"></audio>
-</nav> 
+</nav>
 
 
 
-<div class="back"></div>
 
   <div class="container">
 
 
     <a class="btn Watch btn-light almendra-bold-italic"  role="button"   href="watch.html">Watch the  Videos</a>
     <div class="flag"></div>y
-     <div class="bio almendra-bold text-dark">
+     <div class="bio almendra-bold text-dark container">
         <p style="font-size: 50px;text-align: right ;color: gold;">Greyjoy</p><p style="color: rgb(255, 255, 255);" class="lannister-text">Qreycoylar Vesterosun qərbindəki sərt Dəmir Adalarını "Dəmir Taxt"dan (Iron Throne) müstəqil şəkildə idarə etmək istəyən döyüşçü bir xalqdır. ⚓ Onlar "Biz toxum səpmirik" şüarı ilə yaşayır, yəni ehtiyac duyduqları hər şeyi əkinçiliklə deyil, dəniz yürüşləri və qarətlərlə əldə edirlər. Sülalənin daxili çəkişmələri, xüsusilə Teonun Starklara olan sədaqəti ilə ailəsinə olan bağlılığı arasındakı mübarizə hekayənin ən dramatik tərəflərindən biridir. Eyni zamanda, "Boğulmuş Tanrı"ya olan inancları onları digər xanədanlardan fərqləndirən mistik və qaranlıq bir mədəniyyət formalaşdırıb. Sonda isə bu ailə həm daxili xəyanətlər, həm də Deniris Tarqaryen ilə qurduqları ittifaqlarla Vesterosun taleyində mühüm rol oynamışdır. </p> <p  class=""   style="font-size: 50px; color: yellow; text-align: center">'What Is Dead May Never Die'</p></div>
   </div>
 
